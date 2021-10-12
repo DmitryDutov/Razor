@@ -15,14 +15,11 @@ namespace Razor
     {
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
-
-            //Настройка для возможности использования UseMvcWithDefaultRoute();
-            services.AddControllersWithViews(mvcOtions =>
+            //Сокращённый вариант настройки для UseMvcWithDefaultRoute()
+            services.AddMvc(mvcOtions =>
             {
                 mvcOtions.EnableEndpointRouting = false;
             });
-
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

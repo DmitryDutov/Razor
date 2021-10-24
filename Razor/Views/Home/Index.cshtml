@@ -3,13 +3,12 @@
 @{
     ViewBag.Title = "Product Name";
 }
-<p>
-Product Name: @Model.Name
-</p>
-<p>
-Product Price: @Model.Price
-</p>
-<p>
-Stock Level: @ViewBag.StockLavel
-</p>
+
+<div data-product="@Model.ProductId"
+     data-stocklevel="@ViewBag.StockLevel">
+
+<p>Product Name: @Model.Name</p>
+<p>Product Price: @Model.Price</p>
+<p>Stock Level: @ViewBag.StockLavel</p>
+</div>
 

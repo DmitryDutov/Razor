@@ -1,8 +1,15 @@
 ﻿@model Product
 
 @{
-    Layout = "_BasicLayout";
     ViewBag.Title = "Product Name";
 }
+<p>
 Product Name: @Model.Name
+</p>
+<p>
+Product Price: @Model.Price
+</p>
+<p>
+Stock Level: @ViewBag.StockLavel
+</p>
 

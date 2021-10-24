@@ -11,17 +11,14 @@ namespace Razor.Controllers
     {
         public ViewResult Index()
         {
-            Product myProduct = new Product
+            Product[] array =
             {
-                 ProductId      = 1
-                , Name          = "Lodka"
-                , Description   = "A boat for one person"
-                , Price         = 275M
+                  new Product{Name="Lodka", Price=300 }
+                , new Product{Name="Kater", Price=500 }
+                , new Product{Name="Iahta", Price=1000000 }
             };
 
-            ViewBag.StockLevel = 2;
-
-            return View(myProduct);
+            return View(array);
         }
     }
 }
